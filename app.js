@@ -25,3 +25,16 @@ if(count > 0)
 
     document.write(current + " " + count);
     
+
+Algorithm
+/* ----Breadth-first search 
+   function printObj(obj) {
+        console.log(obj)
+        if( 'children' in obj){
+            for (subObj of obj.children) {
+                printObj(subObj)
+            }
+        }
+    }
+    printObj(parsedData)-----*/
+

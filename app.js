@@ -42,7 +42,15 @@ Algorithm
 /*--------count matching number the number
 var countsbarcode95 = data.map(d => d.barcode95)
 .reduce((total,num) => { total[num[0/1]] = (total[num[0/1]] || 0) + 1; return total}, {} )
-var barcode95Data = Object.entries(countsbarcode95).map(([k,v]) => { return {"barcode95":k, "Value": v}})--------*/
+var barcode95Data = Object.entries(countsbarcode95).map(([k,v]) => { return {"barcode95":k, "Value": v}})
+
+//another way to count matching number the number
+var hetroCount = data.map(d=>d.barcode95).filter(s=>s.match("0/1")).length
+var homoCount = data.map(d=>d.barcode95).filter(s=>s.match("1/1")).length
+var newcount={Genotype:["Hetro","Homo"],Counts:[hetroCount,homoCount]}
+
+
+--------*/
 
 
 

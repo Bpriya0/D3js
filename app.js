@@ -38,3 +38,14 @@ Algorithm
     }
     printObj(parsedData)-----*/
 
+
+/*--------count matching number the number
+var countsbarcode95 = data.map(d => d.barcode95)
+.reduce((total,num) => { total[num[0/1]] = (total[num[0/1]] || 0) + 1; return total}, {} )
+var barcode95Data = Object.entries(countsbarcode95).map(([k,v]) => { return {"barcode95":k, "Value": v}})--------*/
+
+
+
+
+
+

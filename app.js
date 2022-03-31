@@ -52,8 +52,14 @@ var newcount={Genotype:["Hetro","Homo"],Counts:[hetroCount,homoCount]}
 
 --------*/
 
+/*--------Two different ways to create a list of array exp:[0,0,0,0,1,4,0]
+var genes=data.map(d=>d.Gene_Name).filter((value, index, categoryArray) => categoryArray.indexOf(value) === index)
+var annotations=data.map(d=>d.Annotation).filter((value, index, categoryArray) => categoryArray.indexOf(value) === index)
+var orf1abdata = annotations.map(a=>variantAnnotation.filter(d=>d.Gene_Name == "orf1ab").filter(d=>d.Annotation == a).length)
 
-
-
-
+genes = Array.from(new Set(variantAnnotation.map(d => d.Gene_Name)))
+annotations = Array.from(new Set(variantAnnotation.map(d => d.Annotation)))
+gene_annotations = new Map()
+genes.map(g => gene_annotations[g] = annotations.map(a => variantAnnotation.filter(d => d.Gene_Name == g).filter(d => d.Annotation == a).length))
+--------*/
 
